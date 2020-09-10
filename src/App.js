@@ -5,7 +5,7 @@ const mediaQuery = window.matchMedia('(max-width: 600px)'); // ssr will throw er
 // with gatsby.js or next.js comment line above uncomment the rest below
 
 export default function App() {
-  const [isMobile, setIsMobile] = useState(mediaQuery);
+  const [isMobile, setIsMobile] = useState(mediaQuery); // remove mediaQuery from useState
 
   // useEffect(()=> {
   //   const mediaQueryDidMountCheck = () => window.matchMedia('(max-width: 600px)');
