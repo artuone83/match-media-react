@@ -1,3 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 h1, p {
   font-family: Lato;
+}
+
+.desktop-nav {
+  padding: 10px 15px;
+  background: antiquewhite;
+  color: black;
+}
+
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  background: orange;
+  color: white;
+  padding: 10px 15px;
+  margin: 0;
+}
+
+.mobile-nav--close {
+  display: none;
+}
+
+.mobile-nav--open {
+  display: block;
 }
