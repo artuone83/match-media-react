@@ -1,11 +1,17 @@
 import React, { useEffect, useState } from "react";
 import "./style.css";
 
+const mediaQuery = window.matchMedia('(max-width: 600px)');
+
 export default function App() {
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(mediaQuery);
+
+  // useEffect(()=> {
+  //   const mediaQueryDidMountCheck = () => mediaQuery;
+  //   setIsMobile(mediaQueryDidMountCheck());
+  // }, []);
 
   useEffect(()=> {
-    const mediaQuery = window.matchMedia('(max-width: 600px)');
     mediaQuery.addListener((e) => {
       if (e.matches) {
         setIsMobile(true);
@@ -13,7 +19,7 @@ export default function App() {
         setIsMobile(false);
       }
     })
-  }, []);
+  }, [isMobile]);
 
   return (
     <div>
