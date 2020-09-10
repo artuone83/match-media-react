@@ -5,7 +5,7 @@ const mediaQuery = window.matchMedia('(max-width: 600px)'); // ssr will throw er
 // with gatsby.js or next.js comment line above uncomment the rest below
 
 export default function App() {
-  const [isMobile, setIsMobile] = useState(mediaQuery); // remove mediaQuery from useState
+  const [isMobile, setIsMobile] = useState(mediaQuery.matches); // remove mediaQuery.matches from useState
 
   // useEffect(()=> {
   //   const mediaQueryDidMountCheck = () => window.matchMedia('(max-width: 600px)');
@@ -25,8 +25,8 @@ export default function App() {
 
   return (
     <div>
-      <h1>Hello StackBlitz!</h1>
-      {isMobile ? <p>Mobile View</p> : <p>Desktop view</p> }
+      <h1>Hello matchMedia API</h1>
+      {isMobile ? <p>Mobile View</p> : <p>Desktop view</p>}
     </div>
   );
 }
