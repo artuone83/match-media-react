@@ -4,21 +4,22 @@ import "./style.css";
 const navOptions = [
   {
     id: 1,
+    name: 'Home'
   },
   {
-    id: 2
+    id: 2,
+    name: 'About'
   },
   {
-    id: 3
+    id: 3,
+    name: 'Contact'
   },
 ];
 
 const DesktopNavigation = () => {
   return (
     <ul className="desktop-nav">
-      <li>Home</li>
-      <li>About</li>
-      <li>Contact</li>
+      {navOptions.map((option) => <li key={option.name}>{option.name}</li>)}
     </ul>
   );
 }
@@ -26,9 +27,7 @@ const DesktopNavigation = () => {
 const MobileNavigatoin = ({ isMobileNavOpen }) => {
   return (
     <ul className={`mobile-nav ${isMobileNavOpen ?  'mobile-nav--open' : 'mobile-nav--close'}`}>
-      <li>Home</li>
-      <li>About</li>
-      <li>Contact</li>
+      {navOptions.map((option) => <li key={option.name}>{option.name}</li>)}
     </ul>
   );
 }
