@@ -1,4 +1,4 @@
-# How to use matchMedia and outsiede click event
+# How to use matchMedia and outside click event
 
 Visit link below to check code in online editor :point_down:
 
